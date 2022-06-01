@@ -1,0 +1,29 @@
+.card-product{
+  //height: 96px;
+  margin: 20px;
+  display: flex;
+  box-sizing: border-box;
+  border-color: transparent;
+  border-radius: 5px;
+  box-shadow: rgba(102, 44, 145, 0.1) 10px 10px 5px;
+
+  img {
+    border-radius: 5px 0 0 5px;
+    }
+}
+
+.card-product-infos {
+  position: relative;
+  p {
+  margin-bottom: auto;
+ }
+
+  h2 {
+    font-size: 0.8em;
+  }
+}
+
+// .card-info-footer {
+//   position: absolute;
+
+// }

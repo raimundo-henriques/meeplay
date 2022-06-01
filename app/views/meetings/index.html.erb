@@ -3,7 +3,20 @@
 <% # meeting should be a card with info %>
 
 <% @meetings.each do |meeting| %>
-  <p><%= link_to meeting.name, meeting_path(meeting) %></p>
-  <p>boardgame: <%= meeting.boardgame.name %></p>
-  <p>date and time: <%= meeting.start_date %></p>
+  <%= link_to meeting_path(meeting) do %>
+    <div>
+      <div class="card-product">
+        <%= image_tag "boardgame.jpg", width: 96 %>
+        <div class="card-product-infos ms-2">
+          <h2><%= meeting.user.email %></h2>
+            <div class="d-flex justify-content-between">
+              <%# <span>location</span>
+              <span>date</span> %>
+              <p>boardgame: <%= meeting.boardgame.name %></p>
+              <p>date and time: <%= meeting.start_date %></p>
+            </div>
+        </div>
+      </div>
+    </div>
+  <% end %>
 <% end %>
